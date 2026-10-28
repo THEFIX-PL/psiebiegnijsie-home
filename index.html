@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+    <meta content="light" name="color-scheme"/>
+    <meta content="#232D7D" name="theme-color"/>
+    <title>Zmieniamy się dla Was · PsieBiegnijSię</title>
+    <meta content="Nowe PsieBiegnijSię już wkrótce!" name="description"/>
+    <meta content="PsieBiegnijSię" property="og:site_name"/>
+    <meta content="pl_PL" property="og:locale"/>
+    <meta content="Zmieniamy się dla Was" property="og:title"/>
+    <meta content="Nowe PsieBiegnijSię już wkrótce!" property="og:description"/>
+    <meta content="website" property="og:type"/>
+    <meta content="https://psiebiegnijsie.szczecin.pl/" property="og:url"/>
+    <meta content="https://psiebiegnijsie.szczecin.pl/og-image.jpg" property="og:image"/>
+    <meta content="image/jpeg" property="og:image:type"/>
+    <meta content="1200" property="og:image:width"/>
+    <meta content="630" property="og:image:height"/>
+    <link href="/favicon.png" rel="icon" type="image/png"/>
+    <link href="/assets/fonts/source-sans-3.css" rel="stylesheet"/>
+    <link href="/assets/schronisko.css" rel="stylesheet"/>
+    <style>
+        /* The home hero of PsieBiegnijSię alone, over the whole screen. On a computer the drawing fills it under the copy panel; on a phone the tall drawing keeps its whole width at the bottom edge and the copy stands in the space above it. */
+        .fg-hero{padding-top:0}
+        .fg-hero-shell{min-height:100vh;min-height:100dvh;border-radius:0}
+        @media (max-width:820px){
+            .fg-hero-shell{display:flex;flex-direction:column;align-items:stretch}
+            .fg-hero-copy{order:-1;flex:1 0 auto;display:flex;flex-direction:column;justify-content:center;padding-block:calc(var(--s-8) + env(safe-area-inset-top)) var(--s-8)}
+        }
+    </style>
+</head>
+<body>
+<main id="main">
+    <section aria-labelledby="fg-hero-title" class="fg-hero">
+        <div class="fg-hero-shell">
+            <picture class="fg-hero-media">
+                <source media="(max-width: 820px)" srcset="/assets/walks-hero-tall.svg" type="image/svg+xml"/>
+                <img alt="Cztery psy w szelkach idą na smyczach ścieżką w parku" class="walk-hero-photo" fetchpriority="high" height="768" src="/assets/walks-hero-wide.svg" width="1536"/>
+            </picture>
+            <div class="fg-hero-copy">
+                <h1 id="fg-hero-title">Zmieniamy się <em>dla Was.</em></h1>
+                <p class="lead">Nowe PsieBiegnijSię już wkrótce!</p>
+                <div class="btn-row">
+                    <a class="btn btn-green btn-lg" href="https://www.facebook.com/psiebiegnijsie" rel="noopener">Zajrzyj do nas na Facebooku</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
