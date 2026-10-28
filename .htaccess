@@ -1,0 +1,11 @@
+# Every address that is not a file of this page leads to the home page.
+# 302, not 301: browsers must not remember the redirect, because the new PsieBiegnijSię brings those addresses back.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/$
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ / [R=302,L]
+</IfModule>
+
+# Without mod_rewrite a missing address still shows this page instead of the server's error page.
+ErrorDocument 404 /index.html
